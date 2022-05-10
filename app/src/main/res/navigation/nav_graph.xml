@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.companyDrrbni.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_onboarding"
+            app:destination="@id/onboardingFragment"
+          />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.example.companyDrrbni.OnboardingPackage.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboarding_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.companyDrrbni.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpAddressFragment"
+            app:destination="@id/signUpAddressFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpAddressFragment2"
+            app:destination="@id/signUpAddressFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpAddressFragment3"
+            app:destination="@id/signUpAddressFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpAddressFragment4"
+            app:destination="@id/signUpAddressFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpAddressFragment5"
+            app:destination="@id/signUpAddressFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.companyDrrbni.HomeActivity"
+        android:label="HomeActivity" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.companyDrrbni.Fragments.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_verificationCodePasswordFragment"
+            app:destination="@id/verificationCodePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationCodePasswordFragment"
+        android:name="com.example.companyDrrbni.Fragments.VerificationCodePasswordFragment"
+        android:label="VerificationCodePasswordFragment" >
+        <action
+            android:id="@+id/action_verificationCodePasswordFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.companyDrrbni.Fragments.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" />
+    <fragment
+        android:id="@+id/signUpAddressFragment"
+        android:name="com.example.companyDrrbni.Fragments.SignUpAddressFragment"
+        android:label="SignUpAddressFragment" >
+        <action
+            android:id="@+id/action_signUpAddressFragment_to_signUpContactInformationFragment"
+            app:destination="@id/signUpContactInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpContactInformationFragment"
+        android:name="com.example.companyDrrbni.Fragments.SignUpContactInformationFragment"
+        android:label="SignUpContactInformationFragment" />
+</navigation>

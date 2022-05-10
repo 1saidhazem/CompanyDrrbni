@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Company Drrbni</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Onbording Titles-->
+    <string name="onboarding1_title">مرحبا</string>
+    <string name="onboarding2_title">أنشر إعلانات التدريب</string>
+    <string name="onboarding3_title">أختر متدربينك</string>
+    <string name="onboarding4_title">أستعرض معارض الأعمال</string>
+    <!-- Onbording Sub Titles-->
+    <string name="onboarding1_subtitle">تطبيق درّبني يساعد الباحثين عن فرصة التدريب الميداني ويساعد الجهات التدريبية لتقديم الخدمة بتدريب الشباب والشابات وتهيئتهم لسوق العمل</string>
+    <string name="onboarding2_subtitle">استقطب الطلاب من كافة الجامعات والكليات من شتى المجالات  وأعطائهم فرصة للتدريب الميداني </string>
+    <string name="onboarding3_subtitle"> أختر الطلاب المناسبين الذين ترغب في تدريبهم بعد الأطلاع على معرض أعمالهم ومهارتهم وقبول طلبات التدريب الخاص بهم </string>
+    <string name="onboarding4_subtitle">يمكنك الأطللاع على معارض الأعمال وفرزها حسب التخصص المطلوب </string>
+
+    <!-- Login -->
+    <string name="getStarted">البدء</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+
+
+    <string name="title_activity_home">Company Drrbni</string>
+    <string name="title_profile">الملف الشخصي</string>
+    <string name="title_notifications">الاشعارات</string>
+    <string name="title_categories">التصنيفات</string>
+    <string name="title_home">الرئيسية</string>
+    <string name="filter">filter</string>
+    <string name="sortBy">sortBy</string>
+    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="restore_password">أستعادة كلمة المرور</string>
+    <string name="get_code">الحصول على رمز</string>
+    <string name="verification_code">رمز التحقق</string>
+    <string name="verification">التحقق</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="conf_password">تأكيد كلمة المرور الجديدة</string>
+    <string name="name">الأسم</string>
+    <string name="Complete_the_registration_process">إكمال عملية التسجيل</string>
+    <string name="next">التالي</string>
+    <string name="address">العنوان</string>
+    <string name="Contact_Information">معلومات التواصل</string>
+    <string name="whatsapp">واتس اب</string>
+    <string name="link_facebook">رابط الفيسبوك</string>
+    <string name="governorate">المحافظة</string>
+
+
+</resources>
