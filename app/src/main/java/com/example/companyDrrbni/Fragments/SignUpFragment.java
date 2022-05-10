@@ -46,13 +46,17 @@ public class SignUpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         FragmentSignUpBinding binding = FragmentSignUpBinding.inflate(getLayoutInflater(),container,false);
+        String name = binding.signUpEtName.getText().toString().trim();
+        String email = binding.signUpEtEmail.getText().toString().trim();
+        String password = binding.signUpEtPassword.getText().toString().trim();
+        String category = binding.signUpEtCategory.getText().toString().trim();
 
 
         binding.signUpBtnCompleteTheRegistrationProcess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavController navController = Navigation.findNavController(binding.getRoot());
-                navController.navigate(R.id.action_loginFragment_to_signUpAddressFragment5);
+                navController.navigate(R.id.action_loginFragment_to_signUpAddressFragment);   //  FragmentLoginDirections
             }
         });
 

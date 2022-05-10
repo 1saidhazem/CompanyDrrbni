@@ -40,19 +40,25 @@
             app:destination="@id/forgotPasswordFragment" />
         <action
             android:id="@+id/action_loginFragment_to_signUpAddressFragment"
-            app:destination="@id/signUpAddressFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_signUpAddressFragment2"
-            app:destination="@id/signUpAddressFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_signUpAddressFragment3"
-            app:destination="@id/signUpAddressFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_signUpAddressFragment4"
-            app:destination="@id/signUpAddressFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_signUpAddressFragment5"
-            app:destination="@id/signUpAddressFragment" />
+            app:destination="@id/signUpAddressFragment" >
+            <argument
+                android:name="name"
+                app:argType="String"
+                />
+            <argument
+                android:name="email"
+                app:argType="String"
+                />
+            <argument
+                android:name="password"
+                app:argType="String"
+                />
+            <argument
+                android:name="category"
+                app:argType="String"
+                />
+        </action>
+
     </fragment>
     <activity
         android:id="@+id/homeActivity"
@@ -85,6 +91,22 @@
         <action
             android:id="@+id/action_signUpAddressFragment_to_signUpContactInformationFragment"
             app:destination="@id/signUpContactInformationFragment" />
+        <argument
+            android:name="name"
+            app:argType="String"
+            />
+        <argument
+            android:name="email"
+            app:argType="String"
+            />
+        <argument
+            android:name="password"
+            app:argType="String"
+            />
+        <argument
+            android:name="category"
+            app:argType="String"
+            />
     </fragment>
     <fragment
         android:id="@+id/signUpContactInformationFragment"
