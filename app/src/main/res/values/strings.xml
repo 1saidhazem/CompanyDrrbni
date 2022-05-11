@@ -26,8 +26,8 @@
     <string name="title_notifications">الاشعارات</string>
     <string name="title_categories">التصنيفات</string>
     <string name="title_home">الرئيسية</string>
-    <string name="filter">filter</string>
-    <string name="sortBy">sortBy</string>
+    <string name="filter">الفرز</string>
+    <string name="sortBy">الترتيب حسب المنطقة</string>
     <string name="forgot_password">نسيت كلمة المرور</string>
     <string name="restore_password">أستعادة كلمة المرور</string>
     <string name="get_code">الحصول على رمز</string>
@@ -43,6 +43,12 @@
     <string name="whatsapp">واتس اب</string>
     <string name="link_facebook">رابط الفيسبوك</string>
     <string name="governorate">المحافظة</string>
+    <string name="add_img">إضافة صورة</string>
+    <string name="skip">تخطي</string>
+    <string name="add_img_profile">إضافة صورة ملف شخصي</string>
+    <string name="take_picture">إلتقاط صورة</string>
+    <string name="Choose_from_the_library">اختيار من المكتبة</string>
+    <string name="chancel">إلغاء</string>
 
 
 </resources>

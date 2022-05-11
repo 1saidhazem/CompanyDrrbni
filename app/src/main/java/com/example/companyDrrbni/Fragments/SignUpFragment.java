@@ -6,11 +6,12 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.companyDrrbni.R;
+import com.example.companyDrrbni.LoginFragmentDirections;
 import com.example.companyDrrbni.databinding.FragmentSignUpBinding;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -46,17 +47,32 @@ public class SignUpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         FragmentSignUpBinding binding = FragmentSignUpBinding.inflate(getLayoutInflater(),container,false);
-        String name = binding.signUpEtName.getText().toString().trim();
-        String email = binding.signUpEtEmail.getText().toString().trim();
-        String password = binding.signUpEtPassword.getText().toString().trim();
-        String category = binding.signUpEtCategory.getText().toString().trim();
+
 
 
         binding.signUpBtnCompleteTheRegistrationProcess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavController navController = Navigation.findNavController(binding.getRoot());
-                navController.navigate(R.id.action_loginFragment_to_signUpAddressFragment);   //  FragmentLoginDirections
+                String name = binding.signUpEtName.getText().toString().trim();
+                String email = binding.signUpEtEmail.getText().toString().trim();
+                String password = binding.signUpEtPassword.getText().toString().trim();
+                String category = binding.signUpEtCategory.getText().toString().trim();
+
+                if (name.isEmpty()) {
+                    Snackbar.make(view, "أدخل الاسم", Snackbar.LENGTH_LONG).show();
+                } else if (email.isEmpty()) {
+                    Snackbar.make(view, "أدخل الايميل", Snackbar.LENGTH_LONG).show();
+                } else if (password.isEmpty()) {
+                    Snackbar.make(view, "أدخل كلمة المرور", Snackbar.LENGTH_LONG).show();
+                } else if (password.length() < 6) {
+                    Snackbar.make(view, "أدخل كلمة المرور أكبر من 6 أحرف", Snackbar.LENGTH_LONG).show();
+                } else if (category.isEmpty()) {
+                    Snackbar.make(view, "حدد التصنيف", Snackbar.LENGTH_LONG).show();
+                }else {
+                    NavController navController = Navigation.findNavController(binding.getRoot());
+                    navController.navigate
+                            (LoginFragmentDirections.actionLoginFragmentToSignUpAddressFragment(name,email,password,category));
+                }
             }
         });
 

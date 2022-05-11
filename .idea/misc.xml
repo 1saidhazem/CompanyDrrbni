@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/drawable/shape_add_img.xml" value="0.1665" />
+        <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_add_img_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_forgot_password.xml" value="0.26614583333333336" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_login2.xml" value="0.25416666666666665" />
@@ -12,6 +14,7 @@
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_reset_password.xml" value="0.25416666666666665" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_sign_up_add_img.xml" value="0.25416666666666665" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_sign_up_address.xml" value="0.25416666666666665" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_sign_up_contact_information.xml" value="0.25416666666666665" />
         <entry key="..\:/GraduationProject/CompanyDrrbni/app/src/main/res/layout/fragment_splash_screen.xml" value="0.25416666666666665" />

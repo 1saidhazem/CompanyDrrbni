@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SplashScreenFragment extends Fragment {
 
     private FirebaseAuth mAuth;
-    private static int SPLASH_SCREEN_TIME_OUT = 2000;
+    private static int SPLASH_SCREEN_TIME_OUT = 2500;
 
     public SplashScreenFragment() {
         // Required empty public constructor

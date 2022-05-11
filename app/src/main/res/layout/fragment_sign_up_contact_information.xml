@@ -37,14 +37,14 @@
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/loginEmail"
+                android:id="@+id/et_whatsapp"
                 style="@style/editText"
                 android:layout_marginTop="@dimen/_24sdp"
                 android:hint="@string/whatsapp"
                 android:inputType="textEmailAddress"/>
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/loginPassword"
+                android:id="@+id/et_link_facebook"
                 style="@style/editText"
                 android:hint="@string/link_facebook" />
 
@@ -55,7 +55,7 @@
                 >
 
                 <Button
-                    android:id="@+id/login_btn"
+                    android:id="@+id/btn_next"
                     style="@style/blue_btn"
                     android:layout_marginLeft="@dimen/_24sdp"
                     android:layout_marginTop="@dimen/_40sdp"
@@ -68,7 +68,7 @@
                     android:id="@+id/progressBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/login_btn"
+                    android:layout_alignEnd="@+id/btn_next"
                     android:layout_alignParentTop="true"
                     android:elevation="@dimen/_8sdp"
                     android:layout_alignParentBottom="true"
