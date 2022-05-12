@@ -1,6 +1,7 @@
 package com.example.companyDrrbni.Fragments;
 
 import static com.example.companyDrrbni.Constant.COLLECTION_COMPANY_PROFILES;
+import static com.example.companyDrrbni.Constant.EMAIL;
 
 import android.os.Bundle;
 
@@ -45,7 +46,7 @@ public class SignInFragment extends Fragment {
     private String mParam2;
     private FirebaseAuth mAuth;
     private FirebaseFirestore fireStore;
-    private Company company;
+    private Company company = new Company();
 
     public SignInFragment() {
     }
@@ -66,6 +67,7 @@ public class SignInFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        company = new Company();
     }
 
     @Override
@@ -79,66 +81,40 @@ public class SignInFragment extends Fragment {
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String mEmail = binding.loginEmail.getText().toString().trim();
-                String mPassword = binding.loginPassword.getText().toString().trim();
+                String email = binding.loginEmail.getText().toString().trim();
+                String password = binding.loginPassword.getText().toString().trim();
 
-                if (mEmail.isEmpty()) {
+                if (email.isEmpty()) {
                     Snackbar.make(view, "أدخل الايميل", Snackbar.LENGTH_LONG).show();
-                } else if (mPassword.isEmpty()) {
+                } else if (password.isEmpty()) {
                     Snackbar.make(view, "أدخل كلمة المرور", Snackbar.LENGTH_LONG).show();
                 } else {
-                    binding.progressBar.setVisibility(View.VISIBLE);
-                    //
-                    CollectionReference CompanyProfiles = fireStore.collection("CompanyProfiles");
-                    Query query = CompanyProfiles.whereEqualTo("Email", mEmail);
-                    //
-                    fireStore.collection(COLLECTION_COMPANY_PROFILES).whereEqualTo("Email", mEmail).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    fireStore.collection(COLLECTION_COMPANY_PROFILES).whereEqualTo(EMAIL, email).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot doc : task.getResult()) {
                                     company = doc.toObject(Company.class);
-                                    Log.d("ttt",company.getEmail());
                                     break;
                                 }
+                                Log.d("ttt", company.getEmail());
 
-//                                if (company.getEmail().equals(mEmail)) {
-                                    mAuth.signInWithEmailAndPassword(mEmail, mPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                if (company.getEmail().equals(email)) {
+                                    mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                         @Override
                                         public void onComplete(@NonNull Task<AuthResult> task) {
                                             if (task.isSuccessful()) {
-                                                HashMap<String, String> dataProfileUser = new HashMap<>();
-                                                dataProfileUser.put("Email", mEmail);
-                                                dataProfileUser.put("Name", "");
-                                                dataProfileUser.put("Img", "");
-                                                dataProfileUser.put("University", "");
-                                                dataProfileUser.put("Specialization", "");
-                                                dataProfileUser.put("UserId", mAuth.getUid());
-
-                                                fireStore.collection("StudentProfiles").document(mAuth.getUid()).set(dataProfileUser).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                    @Override
-                                                    public void onSuccess(Void unused) {
-
-                                                    }
-                                                }).addOnFailureListener(new OnFailureListener() {
-                                                    @Override
-                                                    public void onFailure(@NonNull Exception e) {
-                                                        Log.d("ttt", "onFailure : " + e.getMessage());
-                                                    }
-                                                });
-
                                                 NavController navController = Navigation.findNavController(binding.getRoot());
                                                 navController.navigate(R.id.action_login_to_homeActivity);
                                                 binding.progressBar.setVisibility(View.INVISIBLE);
                                             } else {
                                                 binding.progressBar.setVisibility(View.VISIBLE);
-
-                                                Snackbar.make(view, "الحساب غير موجود", Snackbar.LENGTH_LONG).show();
+                                                Snackbar.make(view, task.getException().getMessage() , Snackbar.LENGTH_LONG).show();
                                             }
                                             binding.progressBar.setVisibility(View.INVISIBLE);
                                         }
                                     });
-//                                }
+                                }
                             } else {
                                 binding.progressBar.setVisibility(View.INVISIBLE);
                                 Snackbar.make(view, "ليس لديك الصلاحية في الوصول الى هذا الحساب", Snackbar.LENGTH_LONG).show();
