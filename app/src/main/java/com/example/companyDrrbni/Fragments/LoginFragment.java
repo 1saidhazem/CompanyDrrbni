@@ -1,34 +1,18 @@
-package com.example.companyDrrbni;
+package com.example.companyDrrbni.Fragments;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.companyDrrbni.Adapters.OnboardingPagerAdapter;
-import com.example.companyDrrbni.Fragments.SignInFragment;
-import com.example.companyDrrbni.Fragments.SignUpFragment;
+import com.example.companyDrrbni.Fragments.SignUp.SignUpFragment;
 import com.example.companyDrrbni.databinding.FragmentLoginBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class LoginFragment extends Fragment {
 

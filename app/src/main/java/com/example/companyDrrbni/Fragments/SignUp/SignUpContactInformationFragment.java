@@ -1,4 +1,4 @@
-package com.example.companyDrrbni.Fragments;
+package com.example.companyDrrbni.Fragments.SignUp;
 
 import android.os.Bundle;
 
@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.companyDrrbni.R;
 import com.example.companyDrrbni.databinding.FragmentSignUpContactInformationBinding;
 import com.google.android.material.snackbar.Snackbar;
 

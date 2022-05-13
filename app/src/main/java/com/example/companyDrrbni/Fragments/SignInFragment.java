@@ -98,6 +98,7 @@ public class SignInFragment extends Fragment {
                                     break;
                                 }
                                 Log.d("ttt", company.getEmail());
+                                //TODO:: if account is active or not and user type company
 
                                 if (company.getEmail().equals(email)) {
                                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

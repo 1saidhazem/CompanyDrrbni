@@ -1,4 +1,4 @@
-package com.example.companyDrrbni.Fragments;
+package com.example.companyDrrbni.Fragments.SignUp;
 
 import android.os.Bundle;
 
@@ -22,8 +22,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
 
 public class SignUpAddImgFragment extends Fragment {
 
@@ -85,7 +83,7 @@ public class SignUpAddImgFragment extends Fragment {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        Company company = new Company(name, email, category, governorate, address, whatsApp, linkFacebook, mAuth.getUid());
+                                        Company company = new Company(name, email, category, governorate, address, whatsApp, linkFacebook, mAuth.getUid(),false,false);
 
                                         fireStore.collection("CompanyProfiles").document(mAuth.getUid()).set(company).addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override

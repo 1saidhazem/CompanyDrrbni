@@ -1,17 +1,13 @@
-package com.example.companyDrrbni.Fragments;
+package com.example.companyDrrbni.Fragments.Dialogs;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.example.companyDrrbni.databinding.FragmentFilterDialogBinding;
 
-import com.example.companyDrrbni.R;
-import com.example.companyDrrbni.databinding.FragmentAddImgDialogBinding;
-
-public class AddImgDialogFragment extends Fragment {
+public class FilterDialogFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -19,10 +15,10 @@ public class AddImgDialogFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public AddImgDialogFragment() {}
+    public FilterDialogFragment() {}
 
-    public static AddImgDialogFragment newInstance(String param1, String param2) {
-        AddImgDialogFragment fragment = new AddImgDialogFragment();
+    public static FilterDialogFragment newInstance(String param1, String param2) {
+        FilterDialogFragment fragment = new FilterDialogFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -42,9 +38,8 @@ public class AddImgDialogFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        FragmentAddImgDialogBinding binding = FragmentAddImgDialogBinding
+        FragmentFilterDialogBinding binding = FragmentFilterDialogBinding
                 .inflate(getLayoutInflater(),container,false);
-
 
 
         return binding.getRoot();

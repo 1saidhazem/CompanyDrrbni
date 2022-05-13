@@ -2,8 +2,9 @@ package com.example.companyDrrbni.Models;
 
 public class Company {
     private String name,Email,category,governorate,address,whatsApp,linkFacebook,UserId;
+    private boolean isActive,isVerify;
 
-    public Company(String name, String email, String category, String governorate, String address, String whatsApp, String linkFacebook, String userId) {
+    public Company(String name, String email, String category, String governorate, String address, String whatsApp, String linkFacebook, String userId,boolean isVerify,boolean isActive) {
         this.name = name;
         Email = email;
         this.category = category;
@@ -11,7 +12,9 @@ public class Company {
         this.address = address;
         this.whatsApp = whatsApp;
         this.linkFacebook = linkFacebook;
-        UserId = userId;
+        this.UserId = userId;
+        this.isVerify = isVerify;
+        this.isActive = isActive;
     }
 
     public Company() {}

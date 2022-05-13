@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.example.companyDrrbni.SplashScreenFragment"
+        android:name="com.example.companyDrrbni.Fragments.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboardingFragment"
-        android:name="com.example.companyDrrbni.OnboardingPackage.OnboardingFragment"
+        android:name="com.example.companyDrrbni.Fragments.OnBoarding.OnBoardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_onboarding" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.companyDrrbni.LoginFragment"
+        android:name="com.example.companyDrrbni.Fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -74,7 +74,7 @@
         android:label="ResetPasswordFragment" />
     <fragment
         android:id="@+id/signUpAddressFragment"
-        android:name="com.example.companyDrrbni.Fragments.SignUpAddressFragment"
+        android:name="com.example.companyDrrbni.Fragments.SignUp.SignUpAddressFragment"
         android:label="SignUpAddressFragment" >
         <argument
             android:name="name"
@@ -134,7 +134,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpContactInformationFragment"
-        android:name="com.example.companyDrrbni.Fragments.SignUpContactInformationFragment"
+        android:name="com.example.companyDrrbni.Fragments.SignUp.SignUpContactInformationFragment"
         android:label="SignUpContactInformationFragment" >
         <argument
             android:name="name"
@@ -213,7 +213,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpAddImgFragment"
-        android:name="com.example.companyDrrbni.Fragments.SignUpAddImgFragment"
+        android:name="com.example.companyDrrbni.Fragments.SignUp.SignUpAddImgFragment"
         android:label="SignUpAddImgFragment" >
         <argument
             android:name="name"

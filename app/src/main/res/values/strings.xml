@@ -26,7 +26,7 @@
     <string name="title_notifications">الاشعارات</string>
     <string name="title_categories">التصنيفات</string>
     <string name="title_home">الرئيسية</string>
-    <string name="filter">الفرز</string>
+    <string name="filter">الفلتر</string>
     <string name="sortBy">الترتيب حسب المنطقة</string>
     <string name="forgot_password">نسيت كلمة المرور</string>
     <string name="restore_password">أستعادة كلمة المرور</string>
@@ -49,6 +49,32 @@
     <string name="take_picture">إلتقاط صورة</string>
     <string name="Choose_from_the_library">اختيار من المكتبة</string>
     <string name="chancel">إلغاء</string>
+    <string name="ok">موافق</string>
+    <string name="company_name">شركة المستقبل للتكنولوجيا</string>
+    <string name="company_address">غزة - مفترق الصناعة</string>
+    <string name="employment">تكنولوجيا المعلومات</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="custom_item_post">عندما أقف أمام الله في نهاية حياتي ، أتمنى ألا يتبقى لديّ القليل من الموهبة وأستطيع القول ، لقد استخدمت كل ما أعطيتني إياه.</string>
+    <string name="custom_item_date">5 فبراير</string>
+    <string name="custom_item_name">شركة تكنولوجيا المعلومات</string>
+    <string name="search">Search</string>
 
+    <string-array name="specialties_array">
+        <item>كل التخصصات</item>
+        <item>تكنولوجيا المعلومات</item>
+        <item>المحاسبة</item>
+        <item>الصحافة والاعلام</item>
+        <item>الهندسة</item>
+        <item>التصميم والديكور</item>
+        <item>التسويق</item>
+        <item>البلديات</item>
+    </string-array>
+
+    <string-array name="universities_array">
+        <item>كل الجامعات</item>
+        <item>الكلية الجامعية للعلوم التطبيقية</item>
+        <item>الجامعة الاسلامية</item>
+        <item>جامعة الأزهر</item>
+    </string-array>
 
 </resources>

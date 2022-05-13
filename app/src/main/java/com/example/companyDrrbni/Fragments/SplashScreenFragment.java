@@ -1,4 +1,4 @@
-package com.example.companyDrrbni;
+package com.example.companyDrrbni.Fragments;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.example.companyDrrbni.R;
 import com.example.companyDrrbni.databinding.FragmentSplashScreenBinding;
 import com.google.firebase.auth.FirebaseAuth;
 

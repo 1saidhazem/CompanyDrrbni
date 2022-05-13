@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeFragment">
+    tools:context=".Fragments.BottomNavigationScreens.HomeFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -17,6 +17,7 @@
         app:titleTextColor="@android:color/white"
         app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar" />
 
+
     <FrameLayout
         android:id="@+id/filter_bar_container"
         android:layout_width="match_parent"
@@ -26,6 +27,7 @@
         android:paddingBottom="@dimen/_12sdp"
         android:paddingLeft="@dimen/_12sdp"
         android:paddingRight="@dimen/_12sdp">
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/filter_bar"
@@ -39,19 +41,10 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:paddingLeft="@dimen/_4sdp"
-                android:paddingRight="@dimen/_4sdp"
-                android:gravity="center_vertical">
+                android:paddingRight="@dimen/_4sdp">
 
-                <ImageView
-                    android:id="@+id/button_filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:padding="@dimen/_4sdp"
-                    app:srcCompat="@drawable/ic_filter"
-                    app:tint="@color/basic" />
 
                 <LinearLayout
                     android:id="@+id/text_current_search_container"
@@ -59,9 +52,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/_8sdp"
-                    android:layout_toLeftOf="@+id/button_filter"
-                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/button_clear_filter"
                     android:gravity="right"
+                    android:orientation="vertical"
                     android:paddingTop="@dimen/_4sdp"
                     android:paddingBottom="@dimen/_4sdp">
 
@@ -69,16 +62,10 @@
                         android:id="@+id/text_current_search"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/filter"
-                        android:textColor="@color/title_text" />
-
-                    <TextView
-                        android:id="@+id/text_current_sort_by"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/ibm_plex_sans_arabic_regular"
-                        android:text="@string/sortBy"
-                        android:textColor="@color/subtitle_text" />
+                        android:fontFamily="@font/ibm_plex_sans_arabic_bold"
+                        android:text="@string/search"
+                        android:textColor="@color/subtitle_text"
+                        android:textSize="@dimen/_16ssp" />
 
                 </LinearLayout>
 
@@ -88,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:padding="@dimen/_8sdp"
-                    app:srcCompat="@drawable/ic_clear"
+                    app:srcCompat="@drawable/ic_search"
                     app:tint="@color/basic" />
 
             </RelativeLayout>
@@ -99,10 +86,28 @@
 
     <!-- Shadow below toolbar -->
     <View
+        android:id="@+id/shadow"
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:layout_below="@+id/filter_bar_container"
         android:background="@drawable/bg_shadow" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_post_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/shadow"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shadow"
+        tools:listitem="@layout/custom_job_item" />
 
 
 
