@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.companyDrrbni.Fragments.LoginFragment"
+        android:name="com.example.companyDrrbni.Fragments.Auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -51,30 +51,17 @@
         android:label="HomeActivity" />
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.companyDrrbni.Fragments.ForgotPasswordFragment"
+        android:name="com.example.companyDrrbni.Fragments.Auth.ForgotPasswordFragment"
         android:label="ForgotPasswordFragment" >
-        <action
-            android:id="@+id/action_forgotPasswordFragment_to_verificationCodePasswordFragment"
-            app:destination="@id/verificationCodePasswordFragment" />
         <action
             android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/verificationCodePasswordFragment"
-        android:name="com.example.companyDrrbni.Fragments.VerificationCodePasswordFragment"
-        android:label="VerificationCodePasswordFragment" >
-        <action
-            android:id="@+id/action_verificationCodePasswordFragment_to_resetPasswordFragment"
-            app:destination="@id/resetPasswordFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/resetPasswordFragment"
-        android:name="com.example.companyDrrbni.Fragments.ResetPasswordFragment"
-        android:label="ResetPasswordFragment" />
+
+
     <fragment
         android:id="@+id/signUpAddressFragment"
-        android:name="com.example.companyDrrbni.Fragments.SignUp.SignUpAddressFragment"
+        android:name="com.example.companyDrrbni.Fragments.Auth.SignUp.SignUpAddressFragment"
         android:label="SignUpAddressFragment" >
         <argument
             android:name="name"
@@ -134,7 +121,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpContactInformationFragment"
-        android:name="com.example.companyDrrbni.Fragments.SignUp.SignUpContactInformationFragment"
+        android:name="com.example.companyDrrbni.Fragments.Auth.SignUp.SignUpContactInformationFragment"
         android:label="SignUpContactInformationFragment" >
         <argument
             android:name="name"
@@ -213,7 +200,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpAddImgFragment"
-        android:name="com.example.companyDrrbni.Fragments.SignUp.SignUpAddImgFragment"
+        android:name="com.example.companyDrrbni.Fragments.Auth.SignUp.SignUpAddImgFragment"
         android:label="SignUpAddImgFragment" >
         <argument
             android:name="name"

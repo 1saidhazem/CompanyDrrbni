@@ -1,82 +1,53 @@
-package com.example.companyDrrbni.Fragments;
+package com.example.companyDrrbni.Fragments.Auth.SignIn;
 
 import static com.example.companyDrrbni.Constant.COLLECTION_COMPANY_PROFILES;
 import static com.example.companyDrrbni.Constant.EMAIL;
-
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.companyDrrbni.Models.Company;
 import com.example.companyDrrbni.R;
 import com.example.companyDrrbni.databinding.FragmentSignInBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.HashMap;
-
 public class SignInFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
+    private FragmentSignInBinding binding;
     private FirebaseAuth mAuth;
     private FirebaseFirestore fireStore;
-    private Company company = new Company();
+    private Company company;
 
-    public SignInFragment() {
-    }
+    public SignInFragment() {}
 
-    public static SignInFragment newInstance() {  // String param1, String param2
+    public static SignInFragment newInstance() {
         SignInFragment fragment = new SignInFragment();
-//        Bundle args = new Bundle();
-//        args.putString(ARG_PARAM1, param1);
-//        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-        company = new Company();
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        FragmentSignInBinding binding = FragmentSignInBinding.inflate(getLayoutInflater(), container, false);
+        binding = FragmentSignInBinding
+                .inflate(getLayoutInflater(), container, false);
 
         mAuth = FirebaseAuth.getInstance();
         fireStore = FirebaseFirestore.getInstance();
+
+        company = new Company();
 
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -137,4 +108,11 @@ public class SignInFragment extends Fragment {
 
         return binding.getRoot();
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
 }

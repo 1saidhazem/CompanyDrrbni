@@ -1,16 +1,13 @@
-package com.example.companyDrrbni.Fragments;
+package com.example.companyDrrbni.Fragments.Auth;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.companyDrrbni.R;
 import com.example.companyDrrbni.databinding.FragmentForgotPasswordBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,47 +15,25 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.Objects;
-
 public class ForgotPasswordFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
+    private FragmentForgotPasswordBinding binding;
     private FirebaseAuth mAuth;
 
-    public ForgotPasswordFragment() {
-    }
+    public ForgotPasswordFragment() {}
 
-    public static ForgotPasswordFragment newInstance(String param1, String param2) {
+    public static ForgotPasswordFragment newInstance() {
         ForgotPasswordFragment fragment = new ForgotPasswordFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        FragmentForgotPasswordBinding binding = FragmentForgotPasswordBinding.inflate(getLayoutInflater(), container, false);
+        binding = FragmentForgotPasswordBinding.inflate(getLayoutInflater(), container, false);
 
         mAuth = FirebaseAuth.getInstance();
-
-
 
         binding.forgotPasswordBtnGetCode.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +62,12 @@ public class ForgotPasswordFragment extends Fragment {
         });
 
         return binding.getRoot();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
 }

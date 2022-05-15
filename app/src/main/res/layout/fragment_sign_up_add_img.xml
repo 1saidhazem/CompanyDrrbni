@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login" >
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,13 +55,12 @@
                     android:id="@+id/tv_add_img"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/add_img_profile"
-                    android:layout_marginTop="@dimen/_8sdp"
                     android:layout_below="@id/profile_image"
                     android:layout_centerHorizontal="true"
-                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:fontFamily="@font/ibm_plex_sans_arabic_medium"
-                    />
+                    android:text="@string/add_img_profile"
+                    android:textSize="@dimen/_16sdp" />
 
                 <Button
                     android:id="@+id/add_img_btn_add"

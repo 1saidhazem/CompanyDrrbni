@@ -18,19 +18,16 @@ import com.example.companyDrrbni.R;
 import com.example.companyDrrbni.databinding.FragmentOnboardingBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-
 import java.util.ArrayList;
 
 public class OnBoardingFragment extends Fragment {
 
-    FragmentOnboardingBinding binding ;
-    int position = 0;
-    Animation btnAnimation;
-
+    private FragmentOnboardingBinding binding ;
+    private int position = 0;
+    private Animation btnAnimation;
     public OnBoardingFragment() {}
 
-
-    public static OnBoardingFragment newInstance(int screen_img, int title , int description) {
+    public static OnBoardingFragment newInstance() {
         OnBoardingFragment fragment = new OnBoardingFragment();
         return fragment;
     }
@@ -51,8 +48,6 @@ public class OnBoardingFragment extends Fragment {
                              Bundle savedInstanceState) {
 
          binding = FragmentOnboardingBinding.inflate(getLayoutInflater());
-
-        // ArrayList of on boarding fragments
 
         ArrayList<Fragment> fragments = new ArrayList<>();
 
@@ -126,6 +121,13 @@ public class OnBoardingFragment extends Fragment {
 
         return binding.getRoot();
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
     private Boolean restorePrefData() {
         SharedPreferences sharedPreferences =
                 PreferenceManager.getDefaultSharedPreferences(requireContext());

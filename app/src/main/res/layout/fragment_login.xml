@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    >
 
     <LinearLayout
         android:id="@+id/linear_layout"
@@ -27,7 +27,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorColor="@color/subtitle_text"
+                app:tabIndicatorHeight="@dimen/_3sdp"
+                app:tabTextAppearance="@style/tabTextFont"
                 android:layout_marginBottom="@dimen/_4sdp"
                 app:tabTextColor="@color/white">
 

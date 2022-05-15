@@ -1,5 +1,6 @@
 package com.example.companyDrrbni.Fragments;
 
+import static com.example.companyDrrbni.Constant.SPLASH_SCREEN_TIME_OUT;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -14,12 +15,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashScreenFragment extends Fragment {
 
+    private FragmentSplashScreenBinding binding;
     private FirebaseAuth mAuth;
-    private static int SPLASH_SCREEN_TIME_OUT = 2500;
 
-    public SplashScreenFragment() {
-        // Required empty public constructor
-    }
+
+    public SplashScreenFragment() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class SplashScreenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        FragmentSplashScreenBinding binding = FragmentSplashScreenBinding.inflate
+        binding = FragmentSplashScreenBinding.inflate
                 (getLayoutInflater(),container,false);
 
         mAuth = FirebaseAuth.getInstance();
@@ -58,4 +58,11 @@ public class SplashScreenFragment extends Fragment {
 
         return binding.getRoot();
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
 }
