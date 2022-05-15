@@ -40,12 +40,13 @@
     <string name="next">التالي</string>
     <string name="address">العنوان</string>
     <string name="Contact_Information">معلومات التواصل</string>
-    <string name="whatsapp">واتس اب</string>
+    <string name="whatsapp">Whatsapp</string>
     <string name="link_facebook">رابط الفيسبوك</string>
     <string name="governorate">المحافظة</string>
     <string name="add_img">إضافة صورة</string>
     <string name="skip">تخطي</string>
     <string name="add_img_profile">إضافة صورة ملف شخصي</string>
+    <string name="edit_img_profile">تعديل صورة ملف شخصي</string>
     <string name="take_picture">إلتقاط صورة</string>
     <string name="Choose_from_the_library">اختيار من المكتبة</string>
     <string name="chancel">إلغاء</string>
@@ -58,6 +59,23 @@
     <string name="custom_item_date">5 فبراير</string>
     <string name="custom_item_name">شركة تكنولوجيا المعلومات</string>
     <string name="search">Search</string>
+    <string name="job_name">اسم العمل</string>
+    <string name="specialization">التخصص</string>
+    <string name="job_link">رابط العمل</string>
+    <string name="visit">زيارة</string>
+    <string name="description">الوصف</string>
+    <string name="edit_contact_information">تعديل معلومات التواصل</string>
+    <string name="edit_address">تعديل العنوان</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="student_name">سعيد حازم دلول</string>
+    <string name="university_name">الكلية الجامعية للعلوم التطبيقية</string>
+    <string name="specialization_name">برمجيات وقواعد البيانات</string>
+    <string name="gmail">Gmail</string>
+    <string name="Send_a_training_request">أرسل طلب تدريب</string>
+    <string name="visit_profile">زيارة الملف الشخصي</string>
+    <string name="accept">قبول</string>
+    <string name="not_accept">رفض</string>
+
 
     <string-array name="specialties_array">
         <item>كل التخصصات</item>

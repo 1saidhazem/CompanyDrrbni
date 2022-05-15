@@ -27,9 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/_6sdp"
+        tools:listitem="@layout/custom_category_item"
         />
-
-<!--    TODO  -->
-<!--  tools:listitem="@layout/custom_category_item"   -->
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.BottomNavigationScreens.NotificationsFragment">
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,16 +19,14 @@
 
         <TextView
             style="@style/toolbarTitle"
-            android:text="@string/title_notifications"/>
+            android:text="اسم التصنيف"/>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notifications_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/_12sdp"
-        tools:listitem="@layout/custom_notification_item"
-        />
+        tools:listitem="@layout/custom_student_item"/>
 
 
 </LinearLayout>
