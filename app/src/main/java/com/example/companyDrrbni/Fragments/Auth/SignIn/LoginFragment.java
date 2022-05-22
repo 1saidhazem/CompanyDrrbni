@@ -1,4 +1,4 @@
-package com.example.companyDrrbni.Fragments.Auth;
+package com.example.companyDrrbni.Fragments.Auth.SignIn;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.companyDrrbni.Adapters.OnboardingPagerAdapter;
-import com.example.companyDrrbni.Fragments.Auth.SignIn.SignInFragment;
 import com.example.companyDrrbni.databinding.FragmentLoginBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;

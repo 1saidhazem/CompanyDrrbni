@@ -29,22 +29,23 @@ public class SignUpAddressFragment extends Fragment {
         binding.signUpBtnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*
                 String name = SignUpAddressFragmentArgs.fromBundle(requireArguments()).getName();
                 String email = SignUpAddressFragmentArgs.fromBundle(requireArguments()).getEmail();
                 String password = SignUpAddressFragmentArgs.fromBundle(requireArguments()).getPassword();
                 String category = SignUpAddressFragmentArgs.fromBundle(requireArguments()).getCategory();
                 String governorate = binding.signUpEtGovernorate.getText().toString().trim();
                 String address = binding.signUpEtAddress.getText().toString().trim();
-
-                if (governorate.isEmpty()) {
-                    Snackbar.make(view, "حدد المحافظة", Snackbar.LENGTH_LONG).show();
-                } else if (address.isEmpty()) {
-                    Snackbar.make(view, "أدخل العنوان", Snackbar.LENGTH_LONG).show();
-                } else {
+                 */
+//                if (governorate.isEmpty()) {
+//                    Snackbar.make(view, "حدد المحافظة", Snackbar.LENGTH_LONG).show();
+//                } else if (address.isEmpty()) {
+//                    Snackbar.make(view, "أدخل العنوان", Snackbar.LENGTH_LONG).show();
+//                } else {
                     NavController navController = Navigation.findNavController(binding.getRoot());
                     navController.navigate(SignUpAddressFragmentDirections
-                            .actionSignUpAddressFragmentToSignUpContactInformationFragment(name, email, password, category, governorate, address));
-                }
+                            .actionSignUpAddressFragmentToSignUpContactInformationFragment());  // name, email, password, category, governorate, address
+//                }
             }
         });
 

@@ -77,7 +77,7 @@ public class SignInFragment extends Fragment {
                                         public void onComplete(@NonNull Task<AuthResult> task) {
                                             if (task.isSuccessful()) {
                                                 NavController navController = Navigation.findNavController(binding.getRoot());
-                                                navController.navigate(R.id.action_login_to_homeActivity);
+                                                navController.navigate(R.id.action_loginFragment_to_mainFragment);
                                                 binding.progressBar.setVisibility(View.INVISIBLE);
                                             } else {
                                                 binding.progressBar.setVisibility(View.VISIBLE);

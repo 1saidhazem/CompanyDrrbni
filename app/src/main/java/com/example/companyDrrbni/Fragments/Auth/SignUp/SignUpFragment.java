@@ -7,7 +7,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.companyDrrbni.Fragments.Auth.LoginFragmentDirections;
+import com.example.companyDrrbni.Fragments.Auth.SignIn.LoginFragmentDirections;
 import com.example.companyDrrbni.databinding.FragmentSignUpBinding;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -48,7 +48,7 @@ public class SignUpFragment extends Fragment {
                 }else {
                     NavController navController = Navigation.findNavController(binding.getRoot());
                     navController.navigate
-                            (LoginFragmentDirections.actionLoginFragmentToSignUpAddressFragment(name,email,password,category));
+                            (LoginFragmentDirections.actionLoginFragmentToSignUpAddressFragment());  // name,email,password,category
                 }
             }
         });

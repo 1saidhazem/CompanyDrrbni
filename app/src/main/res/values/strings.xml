@@ -75,6 +75,18 @@
     <string name="visit_profile">زيارة الملف الشخصي</string>
     <string name="accept">قبول</string>
     <string name="not_accept">رفض</string>
+    <string name="add_ads">اضافة اعلان تدريب</string>
+    <string name="add">إضافة</string>
+    <string name="required_profession">التخصص المطلوب</string>
+    <string name="choose_specialty">اختيار التخصص</string>
+    <string name="requirements">المتطلبات</string>
+    <string name="publishing">نشر</string>
+    <string name="name_ads">اسم الاعلان</string>
+    <string name="address_name">اعلان تدريب رقم 1</string>
+    <string name="required_profession_name">برمجيات وقواعد البيانات</string>
+    <string name="edit">تعديل</string>
+    <string name="major">التخصص</string>
+    <string name="job_link_text">www.megafreelancer.com</string>
 
 
     <string-array name="specialties_array">

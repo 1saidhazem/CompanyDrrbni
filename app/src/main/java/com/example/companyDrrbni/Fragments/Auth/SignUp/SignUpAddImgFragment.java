@@ -41,6 +41,7 @@ public class SignUpAddImgFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         fireStore = FirebaseFirestore.getInstance();
 
+        /*
         String name = SignUpAddImgFragmentArgs.fromBundle(requireArguments()).getName();
         String email = SignUpAddImgFragmentArgs.fromBundle(requireArguments()).getEmail();
         String password = SignUpAddImgFragmentArgs.fromBundle(requireArguments()).getPassword();
@@ -85,7 +86,7 @@ public class SignUpAddImgFragment extends Fragment {
                 }
             }
         });
-
+ */
         return binding.getRoot();
     }
 
